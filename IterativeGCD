@@ -1,0 +1,14 @@
+def gcdIter(a, b):
+    '''
+    a, b: positive integers
+    
+    returns: a positive integer, the greatest common divisor of a & b.
+    '''
+    # Your code here
+    i = min(a,b)
+    while i >= 0:
+        if a%i == 0 and b%i == 0:
+            return i
+        if i == 0:
+            return 1
+        i -= 1
