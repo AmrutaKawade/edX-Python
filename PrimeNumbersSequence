@@ -1,0 +1,13 @@
+def genPrimes():
+    listPr = [2]
+    x = 2
+    yield 2
+    while True:
+        count = 0
+        x += 1
+        for p in listPr:
+            if (x%p) != 0:
+                count += 1
+        if len(listPr) == count:
+            listPr.append(x)
+            yield x
