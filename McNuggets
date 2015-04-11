@@ -1,0 +1,28 @@
+def McNuggets(n):
+    """
+    n is an int
+
+    Returns True if some integer combination of 6, 9 and 20 equals n
+    Otherwise returns False.
+    """
+    # Your Code Here
+    a = 1
+    b = 1
+    c = n/20
+    d = c
+    while True:
+        sum = n - (6*a+9*b+20*c)
+        if sum == 0:
+            return True
+        elif sum < 6:
+            if b == 0 and c == 0:
+                return False
+            elif c == 0 or d == 1:
+                d = 0
+                b -= 1
+            else:
+                c -= 1
+        elif 6 <= sum < 15:
+            a += 1
+        elif 15 <= sum < 35:
+            b += 1
