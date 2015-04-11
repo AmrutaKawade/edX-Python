@@ -1,0 +1,15 @@
+def clip(lo, x, hi):
+    '''
+    Takes in three numbers and returns a value based on the value of x.
+    Returns:
+     - lo, when x < lo
+     - hi, when x > hi
+     - x, otherwise
+    '''
+    # Your code here
+    total = lo + x + hi
+    low = min(lo,x,hi)
+    high = max(lo,x, hi)
+    total1 = low + high
+    y = total - total1
+    return round(y,2)
